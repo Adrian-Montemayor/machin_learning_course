@@ -1,0 +1,44 @@
+5 Methods of bulding models:
+
+1. All in
+2. Backward Elimination 
+3. Forward Selection
+4. Bidirectional Elimination
+5. Score Comparison 
+
+
+All in - cases:
+    Prior knowledge; 
+    You have to
+    Preparing for backward Elimination
+
+Backward Elimination:
+Step1: Select a significance level to stay in the models
+step2: Fit the full model with all possible predictors
+step3: Consider the predictor with the highest P-value if 
+P > SL, go to step 4 otherwise go to FIN
+step4: remove the predictor
+step5: fit model without this variable
+
+Forward Selection:
+Step1: Select a significance level to enter the model (SL = 0.05)
+step2: fit all regression models y -Xn select the one with the lowest P-value
+step3: keep this variable and fit all possible models with one extra predictor
+added to the one(s) you already have
+step4: consider the predictor with the lowest P-value
+if P < SL go to step 3, otherwise go to FIN.
+
+Bidirectional Elimination
+step1: Select a significance level to enter and to stay in the model
+E.G: SLENTER =0.05, SLSTAY= 0.05
+step2: Perform the next step of forward selection (new variables must have P < SLENTER to enter)
+step 3: Perform all steps of backward elimination (Old variables must have P <SLSTAY to stay)
+step4: No new variables can enter and no old variables can exit:
+FIN.
+
+All possible models
+step1: select a criterion go goodness of fit
+step2: construct all possible regression models 2^n -1 total combinations
+step3: select the one with the best criterion
+fin.
+
